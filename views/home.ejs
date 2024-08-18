@@ -1,0 +1,35 @@
+<%- include("partials/header.ejs") %>
+
+ <!-- Home -->
+ <section id="home">
+    <div class="home-container">
+      <div class="headline">
+        <h3>
+            Hello, There!
+        </h3>
+        <h1>
+          Welcome! Wanna Read Something Today?
+        </h1>
+      </div>
+      <div class="list-container">
+        <% if (articleList.length < 1) { %>
+            <h2 style="text-align: center;">
+                You don't have any articles yet. 
+                <br>
+                Please go to "create article" button above to create a new post.
+            </h2>
+            <% } else { %>
+                <h2 style="text-align: center;">
+                    Your Articles list:
+                </h2>
+            <% } %>
+        <% for (let i=0; i < articleList.length; i++ ) { %>
+            <h4>
+                <%= i+1 %>. <a href="/view/<%=articleList[i].id %>"><%= articleList[i].title %></a>
+            </h4>
+        <% } %>
+      </div>
+    </div>
+  </section>
+
+<%- include("partials/footer.ejs") %>

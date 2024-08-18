@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+
+ <!-- Home -->
+ <section id="view">
+    <div class="view-container">
+      <div class="view">
+        <h1>
+            <%= articleDetails.title %>
+        </h1>
+        <p>
+            <%= articleDetails.content %>
+        </p>
+      </div>
+      <div class="view-button">
+        <a href="/edit/<%=articleDetails.id%>">
+            <button>Edit</button>
+        </a>
+        <form action="/delete/<%=articleDetails.id%>" method="post">
+            <a href="/">
+            <button>Delete</button>
+            </a>
+        </form>
+      </div>
+    </div>
+  </section>
+
+<%- include("partials/footer.ejs") %>

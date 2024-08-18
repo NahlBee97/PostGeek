@@ -1,0 +1,25 @@
+<%- include("partials/header.ejs") %>
+
+ <!-- Home -->
+ <section id="post">
+    <div class="post-container">
+      <div class="post">
+        <h1>Create Your Articles Here:</h1>
+        <form action="/" method="POST">
+            <label for="title">Article's Title:</label>
+            <br>
+            <input type="text" id="title" name="title" required>
+            <br>
+            <label for="content">Article's Content:</label>
+            <br>
+            <textarea name="content" id="content" cols="100" rows="50"></textarea>
+            <br>
+            <a href="/">
+                <button>PUBLISH</button>
+            </a>
+        </form>
+      </div>
+    </div>
+  </section>
+
+<%- include("partials/footer.ejs") %>
